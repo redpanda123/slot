@@ -1,9 +1,6 @@
-import java.util.Arrays;
-
 import com.genesis.exams.slot.*;
 import slot.ExamEvaluator;
 import slot.ExamSpinner;
-import slot.SymbolEnum;
 import slot.SymbolUtil;
 
 import static slot.SymbolEnum.*;
@@ -27,18 +24,12 @@ public class App {
    */
   private static Reel[] getReels() {
     return new Reel[]{
-        new Reel(getSymbols(A, B, C, X, Y, Z)),
-        new Reel(getSymbols(X, Y, Z, A, B, C)),
-        new Reel(getSymbols(A, B, C, X, Y, Z))
+        new Reel(SymbolUtil.getSymbols(A, B, C, X, Y, Z)),
+        new Reel(SymbolUtil.getSymbols(X, Y, Z, A, B, C)),
+        new Reel(SymbolUtil.getSymbols(A, B, C, X, Y, Z))
     };
   }
 
-  /**
-   * Build Array of symbols by Array of SymbolEnum
-   */
-  private static Symbol[] getSymbols(SymbolEnum... symbols) {
-    return Arrays.stream(symbols).map(SymbolEnum::getSymbol).toArray(Symbol[]::new);
-  }
 
 
 }

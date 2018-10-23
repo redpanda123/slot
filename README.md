@@ -2,7 +2,7 @@
 
 Build jar with command :
 ```$xslt
-mvn clean compile assembly:single
+mvn clean test compile assembly:single
 ```
 
 Run the generated jar : 

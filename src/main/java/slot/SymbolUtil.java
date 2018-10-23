@@ -20,4 +20,12 @@ public class SymbolUtil {
         .map(Symbol::getName)
         .collect(Collectors.joining());
   }
+
+  /**
+   * Build Array of symbols by Array of SymbolEnum
+   */
+  public static Symbol[] getSymbols(SymbolEnum... symbols) {
+    return Arrays.stream(symbols).map(SymbolEnum::getSymbol).toArray(Symbol[]::new);
+  }
+
 }
